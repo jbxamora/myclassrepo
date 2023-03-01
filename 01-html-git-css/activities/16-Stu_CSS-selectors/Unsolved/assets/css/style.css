@@ -1,0 +1,34 @@
+/* * refers to all selectors, so will show on all elements */
+* {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* will show on the body element*/
+body {
+  background-color: lemonchiffon;
+}
+
+/* will show on both header and footer elements */
+header,
+footer {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  color: #f0ead6;
+  background-color: #191970;
+}
+/* will show as a background for the image link*/
+figure {
+  width: 200px;
+  background-color: #f0ead6;
+}
+
+/* will make class highlighted-text bolder*/
+.highlighted-text {
+  font-weight: bolder;
+}
+
+/* will make ID contact-section have the background color below */
+#contact-section {
+  background-color: #f0ead6;
+}
