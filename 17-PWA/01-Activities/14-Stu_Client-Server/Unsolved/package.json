@@ -18,8 +18,8 @@
     "concurrently": "^5.2.0"
   },
   "comments": {
-    "comment-start:dev": "TODO: Add your comment about start:dev script inside these quotes",
-    "comment-concurrently": "TODO: Add your comment about concurrently inside these quotes"
+    "comment-start:dev": "TODO: This script is used during development to rebuild the client-side code and start the server at the same time.",
+    "comment-concurrently": "TODO: The 'concurrently' package allows us to run multiple commands in parallel. This is useful in the 'start:dev' script, which runs both the client-side and server-side code at the same time."
   }
 }
 

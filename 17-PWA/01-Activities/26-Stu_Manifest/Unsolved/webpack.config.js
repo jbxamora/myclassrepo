@@ -22,8 +22,19 @@ module.exports = () => {
       new GenerateSW(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
+        name: 'TODOs List',
+        short_name: 'TODOs',
+        description: 'A simple TODOs list application',
+        background_color: '#ffffff',
+        icons: [
+          {
+            src: path.resolve('assets/images/logo.png'),
+            sizes: [72, 96, 128, 144, 192, 256, 384, 512],
+            type: 'image/png',
+          },
+        ],
       }),
-     
+
     ],
 
     module: {
