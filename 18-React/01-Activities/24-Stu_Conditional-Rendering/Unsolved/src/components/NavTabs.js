@@ -1,7 +1,6 @@
 import React from 'react';
 
-// TODO: Add a comment explaining how we are able to extract the key value pairs from props
-
+// We are using object destructuring syntax to extract the `currentPage` and `handlePageChange` key value pairs from the `props` object passed as an argument to this functional component.
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
@@ -9,8 +8,9 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#home"
           onClick={() => handlePageChange('Home')}
-          //*  TODO: BONUS: Add a comment explaining what kind of operator this is and what it is checking for
-
+          // This is a ternary operator, which is checking if `currentPage` is equal to 'Home'. 
+          // If it is, it applies the 'active' CSS class to the link, indicating that it is the currently active page.
+          // If it is not, it applies the 'nav-link' CSS class, indicating that it is an inactive link.
           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
         >
           Home
@@ -20,8 +20,9 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
-          //  TODO: Add a comment explaining what this logic is doing
-
+          // This is another ternary operator, which is checking if `currentPage` is equal to 'About'. 
+          // If it is, it applies the 'active' CSS class to the link, indicating that it is the currently active page.
+          // If it is not, it applies the 'nav-link' CSS class, indicating that it is an inactive link.
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
         >
           About
@@ -31,8 +32,9 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#blog"
           onClick={() => handlePageChange('Blog')}
-          //  TODO: Add a comment explaining what this logic is doing
-
+          // This is also a ternary operator, which is checking if `currentPage` is equal to 'Blog'. 
+          // If it is, it applies the 'active' CSS class to the link, indicating that it is the currently active page.
+          // If it is not, it applies the 'nav-link' CSS class, indicating that it is an inactive link.
           className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
         >
           Blog
@@ -41,9 +43,10 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#contact"
-          //  TODO: Add a comment explaining what this logic is doing
-
           onClick={() => handlePageChange('Contact')}
+          // This is yet another ternary operator, which is checking if `currentPage` is equal to 'Contact'. 
+          // If it is, it applies the 'active' CSS class to the link, indicating that it is the currently active page.
+          // If it is not, it applies the 'nav-link' CSS class, indicating that it is an inactive link.
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
@@ -54,3 +57,4 @@ function NavTabs({ currentPage, handlePageChange }) {
 }
 
 export default NavTabs;
+

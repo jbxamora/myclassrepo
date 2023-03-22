@@ -3,6 +3,7 @@ import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import pretty from 'pretty';
 // TODO: Import the IssueItem component here
+import IssueItem from '../IssueItem'
 
 let container = null;
 
@@ -33,7 +34,7 @@ describe('IssueItem', () => {
     act(() => {
       // TODO: Add a render code block that checks to see if the component renders properly
       // HINT: The render method needs a target "container"
-      render();
+      render.target(container);
     });
     expect(container.textContent).toBe('Git: Support git history in VSCode');
   });

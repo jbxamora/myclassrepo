@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
 
-  // TODO: Add a comment describing the functionality of this method
+  // This method returns the appropriate child component based on the current value of the `currentPage` state variable.
   const renderPage = () => {
     if (currentPage === 'Home') {
       return <Home />;
@@ -22,13 +22,17 @@ export default function PortfolioContainer() {
     return <Contact />;
   };
 
+  // This method updates the `currentPage` state variable when the user clicks on a different page.
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      {/* // TODO: Add a comment describing what we are passing as props */}
+      {/* We are passing two props to the `NavTabs` component: `currentPage` and `handlePageChange`. 
+      `currentPage` is the current value of the `currentPage` state variable, which the `NavTabs` component uses to display the active page.
+      `handlePageChange` is a callback function that is called when the user clicks on a different page. */}
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* // TODO: Add a comment explaining what is happening on the following line */}
+
+      {/* The `renderPage` method is called here to render the appropriate child component based on the current value of the `currentPage` state variable. */}
       {renderPage()}
     </div>
   );
