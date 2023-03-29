@@ -11,6 +11,9 @@ const resolvers = {
     classes: async () => {
       return await Class.find({}).populate('professor');
     },
+    class: async (parent, args) => {
+      return await Class.findById(args.id).populate('professor')
+    },
     professors: async () => {
       return await Professor.find({}).populate('classes');
     }
